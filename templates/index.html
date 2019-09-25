@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>network</title>
+	<style type="text/css">
+		.holder {
+			width: 50%;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="hsolder">
+		<form action='/' method='post'>
+			<input placeholder="Name" name="name">
+			<input placeholder="Content" name="post">
+			<input type="submit" value="Submit ">
+		</form>
+
+		{% for post in posts %}
+		<div> {{ post[1] + ' : ' + post[2] }}</div>
+		{% endfor %}
+	</div>
+</body>
+</html>
